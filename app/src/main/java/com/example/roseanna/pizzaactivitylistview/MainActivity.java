@@ -179,8 +179,10 @@ public class MainActivity extends Activity {
 
     public void setText(){
         calculate();
-        String resultString = "Your total for a " + pSize + " pizza with ";
-        resultString += String.valueOf(numMeats) + " meat toppings, " + String.valueOf(numVeggies) + " veggie toppings is $";
+        String resultString = "Your order: \t " + pSize + " pizza\n";
+        resultString += "Meat toppings: \t" + String.valueOf(numMeats) + " meat toppings \n";
+        resultString += "Vegetable toppings: \t" + String.valueOf(numVeggies) + " veggie toppings\n";
+        resultString += "Total is: \t";
         resultString += String.valueOf(total);
         result.setText(resultString);
         result.setGravity(Gravity.CENTER | Gravity.BOTTOM);

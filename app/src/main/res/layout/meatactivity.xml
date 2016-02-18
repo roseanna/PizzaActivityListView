@@ -18,12 +18,13 @@
         android:textSize="15sp"
         android:paddingLeft="20dp"
         android:gravity="left"
-        android:paddingTop="5dp"/>
+        android:paddingTop="5dp" />
 
     <ListView
         android:id="@+id/meatlist"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ListView>
+        android:layout_height="wrap_content"
+        android:layout_weight="1"></ListView>
 
     <Button
         android:id="@+id/done"

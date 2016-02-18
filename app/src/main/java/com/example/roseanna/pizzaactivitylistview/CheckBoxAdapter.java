@@ -1,7 +1,7 @@
 package com.example.roseanna.pizzaactivitylistview;
 
 /**
- * Created by minkim on 2/16/16.
+ * Created by roseanna on 2/16/16.
  */
 
 
@@ -34,8 +34,8 @@ public class CheckBoxAdapter extends ArrayAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView            = inflater.inflate(R.layout.checkboxrow, parent, false);
         CheckBox cb             = (CheckBox) rowView.findViewById(R.id.checkbox);
-        ImageView imageView     = (ImageView) rowView.findViewById(R.id.pic);
-        TextView textView       = (TextView) rowView.findViewById(R.id.checkText);
+        final ImageView imageView     = (ImageView) rowView.findViewById(R.id.pic);
+        final TextView textView       = (TextView) rowView.findViewById(R.id.checkText);
 
         textView.setText(values[position]);
         if (pics != null && pics.length > position) {
@@ -54,7 +54,6 @@ public class CheckBoxAdapter extends ArrayAdapter {
         });
         return rowView;
     }
-
     @Override
     public int getCount(){
         return values.length;
