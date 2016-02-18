@@ -63,7 +63,7 @@ public class MainActivity extends Activity {
         chooseSize.setText("Choose Pizza Size: ");
         chooseSize.setTextSize(30);
         chooseSize.setGravity(Gravity.CENTER | Gravity.BOTTOM);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this, android.R.layout.simple_spinner_dropdown_item, sizeOptions);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -108,8 +108,11 @@ public class MainActivity extends Activity {
         order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, OrderActivity.class);
-                startActivityForResult(intent, 300);
+//                Separate page
+//                Intent intent = new Intent(MainActivity.this, OrderActivity.class);
+//                startActivityForResult(intent, 300);
+                Toast t = Toast.makeText(getApplicationContext(), "Your order has been placed!", Toast.LENGTH_SHORT);
+                t.show();
             }
         });
         ll.addView(placeOrder);
